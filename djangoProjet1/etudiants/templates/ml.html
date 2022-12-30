@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction de voix</title>
+</head>
+<body>
+    <h1>QUEL LA PROBABILITE QU'IL OPTIENNE BEAUCOUP DE VOIX? </h1>
+    <form action="/etudiants/predire/" method="POST">
+        {% csrf_token %}
+        <br><br>
+        <label>patie politique</label>
+        <input type="number" name="partiPolitique"/>
+        <br><br>
+        <label>Casier Judiciaire</label>
+        <input type="radio" name="casierJudicaire" value="1">contenue</input>
+        <input type="radio" name="casierJudicaire" value="2">vide</input>
+        <br><br>
+        <label>Nombre de la population</label>
+        <input type="number" name="nbrePopulation"/>
+        <br><br>
+        <label>ancienete dans la politique</label>
+        <input type="number" name="ancienetePolitique"/>
+        <br><br>
+        <a href="predire"><input type='submit'/></a>
+    </form>
+    
+</body>
+</html>
